@@ -175,7 +175,7 @@ class TestClientLimits(CephFSTestCase):
         cap_acquisition_value = self.get_session(mount_a_client_id)['cap_acquisition']['value']
         self.assertGreaterEqual(cap_acquisition_value, cap_acquisition_throttle)
 
-        # validate the throttle condition to be hit atleast once
+        # validate the throttle condition to be hit at least once
         cap_acquisition_throttle_hit_count = self.perf_dump()['mds_server']['cap_acquisition_throttle']
         self.assertGreaterEqual(cap_acquisition_throttle_hit_count, 1)
 

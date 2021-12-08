@@ -194,7 +194,7 @@ Upgrading from v0.67 Dumpling
   2012) and store radosgw data, the auto-upgrade from TMAP to OMAP
   objects has been disabled.  Before upgrading, make sure that any
   buckets created on pre-argonaut releases have been modified (e.g.,
-  by PUTing and then DELETEing an object from each bucket).  Any
+  by PUTting and then DELETEing an object from each bucket).  Any
   cluster created with argonaut (v0.48) or a later release or not
   using radosgw never relied on the automatic conversion and is not
   affected by this change.
@@ -420,7 +420,7 @@ Upgrading
   2012) and store radosgw data, the auto-upgrade from TMAP to OMAP
   objects has been disabled.  Before upgrading, make sure that any
   buckets created on pre-argonaut releases have been modified (e.g.,
-  by PUTing and then DELETEing an object from each bucket).  Any
+  by PUTting and then DELETEing an object from each bucket).  Any
   cluster created with argonaut (v0.48) or a later release or not
   using radosgw never relied on the automatic conversion and is not
   affected by this change.

@@ -89,7 +89,7 @@ def get_valgrind_args(testdir, name, preamble, v, exit_on_first_error=True, cd=T
     Build a command line for running valgrind.
 
     testdir - test results directory
-    name - name of daemon (for naming hte log file)
+    name - name of daemon (for naming the log file)
     preamble - stuff we should run before valgrind
     v - valgrind arguments
     """
@@ -1530,7 +1530,7 @@ class CephManager:
         if self.config is None:
             self.config = dict()
 
-        # NOTE: These variables are meant to be overriden by vstart_runner.py.
+        # NOTE: These variables are meant to be overridden by vstart_runner.py.
         self.rook = rook
         self.cephadm = cephadm
         self.testdir = teuthology.get_testdir(self.ctx)
@@ -2595,7 +2595,7 @@ class CephManager:
 
     def get_is_making_recovery_progress(self):
         """
-        Return whether there is recovery progress discernable in the
+        Return whether there is recovery progress discernible in the
         raw cluster status
         """
         status = self.raw_cluster_status()

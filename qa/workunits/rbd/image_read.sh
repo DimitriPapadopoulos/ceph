@@ -38,7 +38,7 @@
 ################################################################
 
 # Default parameter values.  Environment variables, if set, will
-# supercede these defaults.  Such variables have names that begin
+# supersede these defaults.  Such variables have names that begin
 # with "IMAGE_READ_", for e.g. use IMAGE_READ_PAGE_SIZE=65536
 # to use 65536 as the page size.
 set -e

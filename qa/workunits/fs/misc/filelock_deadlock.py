@@ -60,11 +60,11 @@ def main():
         if exitcode == 1:
             deadlk_count += 1
         elif exitcode != 0:
-            raise RuntimeError("unexpect exit code of child")
+            raise RuntimeError("unexpected exit code of child")
         i += 1
 
     if deadlk_count != 1:
-        raise RuntimeError("unexpect count of EDEADLK")
+        raise RuntimeError("unexpected count of EDEADLK")
 
     print('ok')
 

@@ -32,7 +32,7 @@ while [ $timeout -gt 0 ]
 do
   health=$(ceph health detail)
   [[ $health = *"OSD_FULL"* ]] && echo "OSD is full" && break
-  echo "Wating for osd to be full: $timeout"
+  echo "Waiting for osd to be full: $timeout"
   sleep 1
   let "timeout-=1"
 done
@@ -54,7 +54,7 @@ timeout=30
 while [ $timeout -gt 0 ]
 do
   [ -z "$(sudo ls -A $trashdir)" ] && echo "Trash directory $trashdir is empty" &&  break
-  echo "Wating for trash dir to be empty: $timeout"
+  echo "Waiting for trash dir to be empty: $timeout"
   sleep 1
   let "timeout-=1"
 done

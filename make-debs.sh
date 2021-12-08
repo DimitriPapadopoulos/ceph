@@ -36,7 +36,7 @@ git clean -dxf
 vers=$(git describe --match "v*" | sed s/^v//)
 ./make-dist $vers
 #
-# rename the tarbal to match debian conventions and extract it
+# rename the tarball to match debian conventions and extract it
 #
 mv ceph-$vers.tar.bz2 $releasedir/ceph_$vers.orig.tar.bz2
 tar -C $releasedir -jxf $releasedir/ceph_$vers.orig.tar.bz2

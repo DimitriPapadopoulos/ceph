@@ -501,7 +501,7 @@ ol_error=""
 for f in orphan-list-*.out ; do
     if [ -s "$f"  ] ;then # if file non-empty
 	ol_error="${ol_error}:$f"
-	echo "One ore more orphans found in $f:"
+	echo "One or more orphan found in $f:"
 	cat "$f"
     fi
 done

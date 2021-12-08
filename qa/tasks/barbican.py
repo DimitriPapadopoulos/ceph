@@ -362,7 +362,7 @@ def create_secrets(ctx, config):
                     body=key1_json
                 )
             except:
-                log.info("catched exception!")
+                log.info("caught exception!")
                 run_in_barbican_venv(ctx, cclient, ['sleep', '900'])
 
             barbican_sec_resp = sec_req.getresponse()

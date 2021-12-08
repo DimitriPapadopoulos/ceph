@@ -132,8 +132,8 @@ class TestForwardScrub(CephFSTestCase):
         self.fs.mds_asok(["flush", "journal"])
 
         # Create a new inode that's just in the log, i.e. would
-        # look orphaned to backward scan if backward scan wisnae
-        # respectin' tha scrub_tag xattr.
+        # look orphaned to backward scan if backward scan was not
+        # respecting that scrub_tag xattr.
         self.mount_a.mount_wait()
         self.mount_a.run_shell(["mkdir", "parent/unflushed"])
         self.mount_a.run_shell(["dd", "if=/dev/urandom",

@@ -120,7 +120,7 @@ def task(ctx, config):
             time.sleep(4)
 
     # reboot all nodes and verify the systemd units restart
-    # workunit that runs would fail if any of the systemd unit doesnt start
+    # workunit that runs would fail if any of the systemd unit doesn't start
     ctx.cluster.run(args='sudo reboot', wait=False, check_status=False)
     # avoid immediate reconnect
     time.sleep(120)

@@ -124,7 +124,7 @@ function TEST_mon_add_to_single_mon() {
     # without the fix of #5454, mon.a will assert failure at seeing the MMonJoin
     # from mon.b
     run_mon $dir b --public-addr $MONB || return 1
-    # make sure mon.b get's it's join request in first, then
+    # make sure mon.b gets its join request in first, then
     sleep 2
     # wait for the quorum
     timeout 120 ceph -s > /dev/null || return 1

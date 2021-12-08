@@ -14,7 +14,7 @@ ExternalProject_Add(QatDrv
   CONFIGURE_COMMAND ${qatdrv_env} ./configure ${qatdrv_config_args}
 
 # Temporarily forcing single thread as multi-threaded make is causing build
-# failues.
+# failures.
   BUILD_COMMAND make -j1 quickassist-all
   BUILD_IN_SOURCE 1
   INSTALL_COMMAND ""

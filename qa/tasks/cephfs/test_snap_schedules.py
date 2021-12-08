@@ -32,7 +32,7 @@ class TestSnapSchedules(CephFSTestCase):
         now = time.time()
         delta = now - exec_time
         log.debug(f'exec={exec_time}, now = {now}, timo = {timo}')
-        # tolerate snapshot existance in the range [-5,+5]
+        # tolerate snapshot existence in the range [-5,+5]
         self.assertTrue((delta <= timo + 5) and (delta >= timo - 5))
 
     def _fs_cmd(self, *args):
@@ -143,7 +143,7 @@ class TestSnapSchedules(CephFSTestCase):
 
     def calc_wait_time_and_snap_name(self, snap_sched_exec_epoch, schedule):
         timo = self._schedule_to_timeout(schedule)
-        # calculate wait time upto the next minute
+        # calculate wait time up to the next minute
         wait_timo = seconds_upto_next_schedule(snap_sched_exec_epoch, timo)
 
         # expected "scheduled" snapshot name

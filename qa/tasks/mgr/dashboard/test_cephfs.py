@@ -247,7 +247,7 @@ class CephfsTest(DashboardTestCase):
         data = self.ls_dir('/movies', 1)
         self.assertEqual(len(data[0]['snapshots']), 0)
 
-        # Cleanup. Note, the CephFS Python extension (and therefor the Dashboard
+        # Cleanup. Note, the CephFS Python extension (and therefore the Dashboard
         # REST API) does not support recursive deletion of a directory.
         self.rm_dir('/movies/dune/extended_version')
         self.rm_dir('/movies/dune')

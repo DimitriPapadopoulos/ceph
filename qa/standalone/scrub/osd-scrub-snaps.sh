@@ -104,7 +104,7 @@ function create_scenario() {
     grep SNA_ $dir/drk.log
     grep "^[pm].*SNA_.*[.]1[.]obj5[.][.]$" $dir/drk.log || return 1
     ceph-objectstore-tool --data-path $dir/${osd} --rmtype nosnapmap "$JSON" remove || return 1
-    # Check that snapmap is stil there
+    # Check that snapmap is still there
     ceph-kvstore-tool bluestore-kv $dir/${osd} list 2> /dev/null > $dir/drk.log
     grep SNA_ $dir/drk.log
     grep "^[pm].*SNA_.*[.]1[.]obj5[.][.]$" $dir/drk.log || return 1

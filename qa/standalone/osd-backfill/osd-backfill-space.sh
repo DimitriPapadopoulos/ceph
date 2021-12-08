@@ -290,7 +290,7 @@ function TEST_backfill_test_multi() {
 # Set size back to 2
 # The 2 pools should race to backfill.
 # One pool goes active+clean
-# The other goes acitve+...+backfill_toofull
+# The other goes active+...+backfill_toofull
 function TEST_backfill_test_sametarget() {
     local dir=$1
     local pools=10
@@ -416,7 +416,7 @@ function TEST_backfill_test_sametarget() {
 # Write to fill pool which is size 1
 # Take fill pool osd down (other 2 pools must go to the remaining OSDs
 # Save an export of data on fill OSD and restart it
-# Write an intial 1K to pool1 which has pg 2.0
+# Write an initial 1K to pool1 which has pg 2.0
 # Export 2.0 from non-fillpool OSD don't wait for it to start-up
 # Take down fillpool OSD
 # Put 1K object version of 2.0 on fillpool OSD
@@ -619,7 +619,7 @@ function TEST_backfill_grow() {
 # Write the EC pool on 5 OSDs
 # Take down 1 (must contain an EC shard)
 # Bring up OSD with fill data
-# Not enought room to backfill to partially full OSD
+# Not enough room to backfill to partially full OSD
 function TEST_ec_backfill_simple() {
     local dir=$1
     local EC=$2
@@ -744,7 +744,7 @@ function osdlist() {
 # Remap the last OSD to partially full OSD on both pools
 # The 2 pools should race to backfill.
 # One pool goes active+clean
-# The other goes acitve+...+backfill_toofull
+# The other goes active+...+backfill_toofull
 function TEST_ec_backfill_multi() {
     local dir=$1
     local EC=$2
@@ -861,7 +861,7 @@ function TEST_ec_backfill_multi() {
 # Remap the last OSD to partially full OSD on both pools
 # The 2 pools should race to backfill.
 # One pool goes active+clean
-# The other goes acitve+...+backfill_toofull
+# The other goes active+...+backfill_toofull
 function SKIP_TEST_ec_backfill_multi_partial() {
     local dir=$1
     local EC=$2

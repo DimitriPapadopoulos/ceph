@@ -2256,7 +2256,7 @@ class TestSubvolumes(TestVolumesHelper):
 
     def test_subvolume_shrink(self):
         """
-        That a subvolume can be shrinked in size and its quota matches the expected size.
+        That a subvolume can be shrunk in size and its quota matches the expected size.
         """
 
         # create subvolume
@@ -2363,7 +2363,7 @@ class TestSubvolumeGroupSnapshots(TestVolumesHelper):
         # snapshot group
         self._fs_cmd("subvolumegroup", "snapshot", "create", self.volname, group, snapshot)
 
-        # try creating snapshot w/ same snapshot name -- shoule be idempotent
+        # try creating snapshot w/ same snapshot name -- should be idempotent
         self._fs_cmd("subvolumegroup", "snapshot", "create", self.volname, group, snapshot)
 
         # remove snapshot

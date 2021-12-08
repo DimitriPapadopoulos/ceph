@@ -394,7 +394,7 @@ class TestJournalRepair(CephFSTestCase):
 
         self.mount_a.mount_wait()
 
-        # trivial sync moutn a
+        # trivial sync mount a
         workunit(self.ctx, {
             'clients': {
                 "client.{0}".format(self.mount_a.client_id): [

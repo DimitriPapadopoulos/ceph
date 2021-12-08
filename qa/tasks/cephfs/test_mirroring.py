@@ -698,7 +698,7 @@ class TestMirroring(CephFSTestCase):
         """Test mirror daemon init failure"""
 
         # disable mgr mirroring plugin as it would try to load dir map on
-        # on mirroring enabled for a filesystem (an throw up erorrs in
+        # on mirroring enabled for a filesystem (and throw up errors in
         # the logs)
         self.disable_mirroring_module()
 
@@ -734,7 +734,7 @@ class TestMirroring(CephFSTestCase):
         """Test if the mirror daemon can recover from a init failure"""
 
         # disable mgr mirroring plugin as it would try to load dir map on
-        # on mirroring enabled for a filesystem (an throw up erorrs in
+        # on mirroring enabled for a filesystem (an throw up errors in
         # the logs)
         self.disable_mirroring_module()
 
@@ -1090,7 +1090,7 @@ class TestMirroring(CephFSTestCase):
         """Test snapshot synchronization in midst of snapshot deletes.
 
         Deleted the previous snapshot when the mirror daemon is figuring out
-        incremental differences between current and previous snaphot. The
+        incremental differences between current and previous snapshot. The
         mirror daemon should identify the purge and switch to using remote
         comparison to sync the snapshot (in the next iteration of course).
         """

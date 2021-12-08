@@ -290,7 +290,7 @@ class LocalRemote(object):
         except shutil.SameFileError:
             pass
 
-    # XXX: accepts only two arugments to maintain compatibility with
+    # XXX: accepts only two arguments to maintain compatibility with
     # teuthology's mkdtemp.
     def mkdtemp(self, suffix='', parentdir=None):
         from tempfile import mkdtemp
@@ -790,7 +790,7 @@ class LocalCephManager(CephManager):
         # methods to work though.
         self.pools = {}
 
-        # NOTE: These variables are being overriden here so that parent class
+        # NOTE: These variables are being overridden here so that parent class
         # can pick it up.
         self.cephadm = False
         self.rook = False

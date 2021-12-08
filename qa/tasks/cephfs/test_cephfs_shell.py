@@ -201,7 +201,7 @@ class TestMkdir(TestCephFSShell):
 
     def test_mkdir_with_bad_non_octal_mode(self):
         """
-        Test that mkdir failes with bad non-octal mode
+        Test that mkdir fails with bad non-octal mode
         """
         self.negtest_cephfs_shell_cmd(cmd="mkdir -m ugx=0755 d5")
         try:
@@ -643,7 +643,7 @@ class TestDU(TestCephFSShell):
                                                False)['st_size'])
             append_expected_output_pattern(f)
 
-        # get size for directories containig regfiles within
+        # get size for directories containing regfiles within
         for f in [dir2_abspath, dir21_abspath]:
             size = humansize(self.mount_a.stat(regfile121_abspath,
                              follow_symlinks=False)['st_size'])
